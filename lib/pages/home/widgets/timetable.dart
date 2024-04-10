@@ -378,7 +378,14 @@ class SettingsPage extends StatelessWidget {
     // Use widget.characters to access the passed data
     return Scaffold(
       appBar: AppBar(
-        title: Text('ตั้งค่า'),
+        title: Text(
+          'ตั้งค่า',
+          style: TextStyle(
+            color: Colors.white, // กำหนดสีของตัวหนังสือใน AppBar เป็นสีขาว
+          ),
+        ),
+        backgroundColor:
+            Colors.lightBlue, // กำหนดสีของพื้นหลังของ AppBar เป็นสีสว่างบลู
       ),
       body: ListView(
         padding: EdgeInsets.all(16.0),
@@ -386,7 +393,12 @@ class SettingsPage extends StatelessWidget {
           Divider(),
           ListTile(
             leading: Icon(Icons.favorite),
-            title: Text('ตั้งค่ารายการโปรด'),
+            title: Text(
+              'รายการโปรด',
+              style: TextStyle(
+                color: Colors.blue, // กำหนดสีของตัวหนังสือเป็นสีฟ้า
+              ),
+            ),
             onTap: () {
               _showFavoriteSettings(context);
             },
@@ -394,7 +406,12 @@ class SettingsPage extends StatelessWidget {
           Divider(),
           ListTile(
             leading: Icon(Icons.language),
-            title: Text('เปลี่ยนภาษา'),
+            title: Text(
+              'เปลี่ยนภาษา',
+              style: TextStyle(
+                color: Colors.blue, // กำหนดสีของตัวหนังสือเป็นสีฟ้า
+              ),
+            ),
             onTap: () {
               _showLanguageSelectionDialog(
                   context); // เรียกฟังก์ชันแสดงหน้าต่างเลือกภาษา
@@ -403,7 +420,12 @@ class SettingsPage extends StatelessWidget {
           Divider(),
           ListTile(
             leading: Icon(Icons.exit_to_app),
-            title: Text('ออกจากระบบ'),
+            title: Text(
+              'ออกจากระบบ',
+              style: TextStyle(
+                color: Colors.blue, // กำหนดสีของตัวหนังสือเป็นสีฟ้า
+              ),
+            ),
             onTap: () {
               _confirmSignOut(context);
             },
